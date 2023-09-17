@@ -1,15 +1,14 @@
 import Featured from "@/components/featured/Featured"
 import CategoryList from "@/components/categoryList/CategoryList"
 import CardList from "@/components/cardList/CardList"
-import Aside from "@/components/aside/Aside"
 
-export default function Home() {
+export default function Blog({ searchParams }) {
+  const { cat } = searchParams
   return (
     <main className=''>
-      <Featured />
       <CategoryList />
-      <section className=" mt-16 ">
-        <CardList />
+      <section className="flex gap-2 mt-16 flex-wrap">
+        <CardList cat={ cat } />
       </section>
     </main>
   )
