@@ -7,9 +7,7 @@ export const getPosts = async (cat) => {
   const url = cat ? `${apiUrl}/${cat}` : apiUrl;
 
   const res = await fetch(url, {
-    next: {
-      revalidate: 10,
-    },
+    cache: "no-store",
   });
 
   const respuesta = await res.json();
