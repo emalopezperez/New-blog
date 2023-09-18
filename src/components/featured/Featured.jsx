@@ -31,6 +31,7 @@ const Featured = async () => {
             "
             width={400}
             height={400}
+            priority
           />
         </div>
         <div className="flex-1 flex-col gap-[20px] flex justify-center h-full md:h-[370px] ">
@@ -38,7 +39,9 @@ const Featured = async () => {
             {titulo}
           </h2>
           <p className="md:text-[18px] text:md">{contenido}</p>
-          <Link href="/about" className="p-[10px] w-[max-content] rounded-md bg-[#ffb04f45] ">
+          <Link
+            href="/about"
+            className="p-[10px] w-[max-content] rounded-md bg-[#ffb04f45] ">
             Read More
           </Link>
         </div>

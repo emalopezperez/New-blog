@@ -27,7 +27,7 @@ const CardList = async ({ cat }) => {
             </h2>
           ) : (
             <h2 className="md:text-3xl font-bold tracking-tight text-[22px] pb-6 md:pb-10">
-              Ultimos articulos
+              Articulos
             </h2>
           )}
 

@@ -48,9 +48,9 @@ const Card = ({ post }) => {
         <div className="xl:mt-6 mt-0 flex border-t border-gray-900/5 pt-6">
           <div className="relative flex items-center gap-x-4">
             <img
-              src="https://previews.123rf.com/images/mirquurius/mirquurius1912/mirquurius191200011/136127599-lindo-astronauta-mantiene-un-globo-como-moon-mano-dibujado-style-espacio-vector.jpg"
-              alt=""
-              className="h-10 w-10 rounded-full bg-gray-50"
+              src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+              alt="detail"
+              className="h-10 w-10  bg-gray-50 rounded-3xl"
             />
             <div className="text-sm leading-6">
               <p className="font-semibold ">

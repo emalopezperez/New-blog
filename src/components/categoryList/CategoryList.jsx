@@ -57,15 +57,11 @@ const CategoryList = () => {
       <h3 className="font-bold text-[16px] md:text-[22px]">Categorias</h3>
       <div className="w-full h-full flex flex-col md:flex-row gap-3 xl:justify-between flex-wrap">
         {links.map(({ link, img, name, background }, index) => (
-          <Link href={link} key={index} className="">
+          <Link href={link} key={index} className="hover:bg-black/10 rounded-md">
             <div
-              className={`bg-${background} flex gap-3 items-center w-full py-3 px-5 rounded-md`}
+              className={`bg-${background}  flex gap-3 items-center w-full py-3 px-5 rounded-md`}
               style={{ background }}>
-              <img
-                src={img}
-                alt=""
-                className="h-[22px] w-[22px] rounded-[50%]"
-              />
+              <div className="h-[22px] w-[22px] rounded-md border border-gray-500 "></div>
               <h3>{name}</h3>
             </div>
           </Link>

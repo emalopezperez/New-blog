@@ -2,6 +2,7 @@ import ContentMarkdown from "./components/Markdown";
 import Navigation from "./components/Navigation";
 import Image from "next/image";
 
+
 const DetailArticle = ({ post }) => {
   const { titulo, imagen, markdown, author, contenido } = post;
 
@@ -48,16 +49,20 @@ const DetailArticle = ({ post }) => {
         <div className="h-[350px] flex-1 relative">
           <Image
             src={imagen}
-            alt=""
-            className="object-fill"
+            alt={titulo}
+            className="object-fill rounded-xl"
             width={600}
             height={400}
+            priority
           />
         </div>
       </header>
 
       <div className="xl:mt-[100px] md:mt-[80px] mb-[30px] xl:mb-[20px] mt-[20px] h-full  md:h-[100px] w-full">
-        {contenido} Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam non quidem accusamus omnis maiores numquam temporibus ea, amet eius, rem in eligendi? Provident, inventore ratione incidunt blanditiis ducimus cumque?
+        {contenido} Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Voluptas ullam non quidem accusamus omnis maiores numquam temporibus ea,
+        amet eius, rem in eligendi? Provident, inventore ratione incidunt
+        blanditiis ducimus cumque?
       </div>
 
       <section className="flex gap-10 relative ">
