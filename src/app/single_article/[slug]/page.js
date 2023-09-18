@@ -1,10 +1,9 @@
 import DetailArticle from "@/components/detailArticle/DetailArticle";
-//{cache: "no-store",}
 
 const getPost = async (slug) => {
 
-  const res = await fetch(`https://backend-blog-tau.vercel.app/api/article/${slug}`
-
+  const res = await fetch(`https://backend-blog-tau.vercel.app/api/article/${slug}`,
+    { cache: "no-store", }
   );
   const respuesta = await res.json();
   return respuesta.item

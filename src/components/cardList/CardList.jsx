@@ -1,14 +1,13 @@
 import Pagination from "../pagination/Pagination";
 import Card from "../card/Card";
 
-//, {cache: "no-store",}
 
 export const getPosts = async (cat) => {
   const apiUrl = "https://backend-blog-tau.vercel.app/api/articles";
 
   const url = cat ? `${apiUrl}/${cat}` : apiUrl;
 
-  const res = await fetch(url);
+  const res = await fetch(url, {cache: "no-store",});
 
   const respuesta = await res.json();
   return respuesta.items;
