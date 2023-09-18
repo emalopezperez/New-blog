@@ -1,13 +1,13 @@
 "use client";
 import { Disclosure } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { XMarkIcon } from "@heroicons/react/24/outline";
 import ThemeToggle from "./components/themeToggle/ThemeToggle";
 import Link from "next/link";
 
 const navigation = [
-  { name: "Home", href: "#", current: false },
-  { name: "Recursos", href: "#", current: false },
-  { name: "Sobre mi", href: "/", current: false },
+  { name: "Home", href: "/", current: false },
+  { name: "Recursos", href: "/", current: false },
+  { name: "Sobre mi", href: "/about", current: false },
 ];
 
 function classNames(...classes) {
@@ -45,7 +45,7 @@ export default function Nav() {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center ">
                   <Link href="/">
-                    <h1 className="text-2xl">Blog</h1>
+                    <h1 className="text-2xl text-bold">Blog</h1>
                   </Link>
                 </div>
                 <div className="hidden sm:ml-6 sm:block ">

@@ -54,7 +54,7 @@ const links = [
 const CategoryList = () => {
   return (
     <div className="mt-[30px] flex flex-col gap-8 h-full">
-      <h1 className="font-bold">Categorias</h1>
+      <h3 className="font-bold text-[16px] md:text-[22px]">Categorias</h3>
       <div className="w-full h-full flex flex-col md:flex-row gap-3 xl:justify-between flex-wrap">
         {links.map(({ link, img, name, background }, index) => (
           <Link href={link} key={index} className="">

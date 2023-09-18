@@ -33,10 +33,10 @@ const Navigation = ({ markdown }) => {
 
   return (
     <nav className=" ">
-      <h3 className="mb-6 text-2xl">Indice:</h3>
+      <h3 className="mb-6 text-2xl font-bold">Indice:</h3>
       {index.map((element, h1Index) => (
-        <div key={h1Index}>
-          <h2 className="text-md cursor-pointer w-[100%] hover:text-gray-500">
+        <div key={h1Index} className="">
+          <h2 className="text-md cursor-pointer w-[100%] hover:text-gray-500 ">
             <ScrollLink
               to={formatID(element.nombre)}
               smooth={true}

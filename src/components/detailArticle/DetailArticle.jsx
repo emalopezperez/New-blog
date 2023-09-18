@@ -1,5 +1,6 @@
 import ContentMarkdown from "./components/Markdown";
 import Navigation from "./components/Navigation";
+import Image from "next/image";
 
 const DetailArticle = ({ post }) => {
   const { titulo, imagen, markdown, author, contenido } = post;
@@ -9,16 +10,16 @@ const DetailArticle = ({ post }) => {
       <header className="flex flex-col xl:flex-row flex-1 items-center gap-[50px] w-full">
         <div className="flex-1 pt-5">
           <div className="">
-            <h3 className="text-[40px] font-bold">
-              {titulo}, sit amet consectetur adipisicing elit.
+            <h3 className="xl:text-[40px]  text-2xl font-bold pb-8">
+              {titulo}
             </h3>
           </div>
           <div className="flex pt-8 w-full justify-between pr-12">
             <div className="relative flex items-center gap-x-4">
               <img
                 src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                alt=""
-                className="h-10 w-10  bg-gray-50"
+                alt="detail"
+                className="h-10 w-10  bg-gray-50 rounded-3xl"
               />
               <div className="text-sm leading-6">
                 <p className="font-semibold ">
@@ -37,24 +38,26 @@ const DetailArticle = ({ post }) => {
               </time>
               <a
                 href="/"
-                className="relative z-10 rounded-full bg-[#ffb04f45] px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
-                java
+                className="relative z-10 rounded-full bg-[#ffb04f45] px-3 py-1.5 font-medium  hover:bg-gray-100">
+                Java
               </a>
             </div>
           </div>
         </div>
 
         <div className="h-[350px] flex-1 relative">
-          <img src={imagen} alt="" className="object-fill" />
+          <Image
+            src={imagen}
+            alt=""
+            className="object-fill"
+            width={600}
+            height={400}
+          />
         </div>
       </header>
 
       <div className="xl:mt-[100px] md:mt-[80px] mb-[30px] xl:mb-[20px] mt-[20px] h-full  md:h-[100px] w-full">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolores
-        odit consequatur amet molestias nostrum culpa praesentium esse quia
-        doloremque, aperiam facilis eveniet sequi architecto, iure eos deleniti
-        distinctio deserunt! Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Tenetur dolores odit consequatur amet molestias nostrum culpa
+        {contenido} Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam non quidem accusamus omnis maiores numquam temporibus ea, amet eius, rem in eligendi? Provident, inventore ratione incidunt blanditiis ducimus cumque?
       </div>
 
       <section className="flex gap-10 relative ">

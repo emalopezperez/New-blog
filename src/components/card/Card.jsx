@@ -1,6 +1,6 @@
 "use client";
-
 import Link from "next/link";
+import Image from "next/image";
 import { formatDate } from "@/helpers/formatDate";
 
 const Card = ({ post }) => {
@@ -14,10 +14,12 @@ const Card = ({ post }) => {
       key={_id}
       className="relative isolate flex flex-col gap-4 xl:gap-12 lg:flex-row items-center">
       <div className="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square xl:w-[280px] md:w-[280px] w-full lg:shrink-0">
-        <img
+        <Image
           src={imagen}
-          alt=""
+          alt="asas"
           className="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover"
+          width={300}
+          height={400}
         />
         <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
       </div>

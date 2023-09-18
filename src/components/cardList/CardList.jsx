@@ -26,7 +26,7 @@ const CardList = async ({ cat }) => {
               <span>{data[0].categoria}</span>
             </h2>
           ) : (
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl pb-10">
+            <h2 className="md:text-3xl font-bold tracking-tight text-[22px] pb-6 md:pb-10">
               Ultimos articulos
             </h2>
           )}
