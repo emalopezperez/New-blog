@@ -4,7 +4,7 @@ import Image from "next/image";
 
 
 const DetailArticle = ({ post }) => {
-  const { titulo, imagen, markdown, author, contenido } = post;
+  const { titulo, imagen, markdown,  contenido } = post;
 
   return (
     <div className="w-full h-full">

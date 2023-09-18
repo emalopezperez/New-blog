@@ -2,6 +2,7 @@
 import { Disclosure } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import ThemeToggle from "./components/themeToggle/ThemeToggle";
+import Profile from "./components/profile/Profile";
 import Link from "next/link";
 
 const navigation = [
@@ -65,8 +66,12 @@ export default function Nav() {
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <div className="absolute inset-y-0 right-0 gap-3 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <ThemeToggle />
+                <div className="md:flex hidden">
+                <Profile/>
+                </div>
+                
               </div>
             </div>
           </div>
@@ -90,6 +95,7 @@ export default function Nav() {
               ))}
 
               <div className="flex xl:hidden"></div>
+                <Profile mobil={true}/>
             </div>
           </Disclosure.Panel>
         </>

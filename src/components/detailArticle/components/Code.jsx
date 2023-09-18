@@ -17,7 +17,7 @@ const Code = ({ children }) => {
 
   return (
     <section className="max-w-[100%] mt-5 mb-5 ">
-      <nav className="flex justify-between p-2  text-white text-xs items-center bg-gray-900 w-full">
+      <nav className="flex justify-between p-2  text-white text-xs items-center bg-gray-900 w-full ">
         <p>Ejemplo codigo</p>
 
         {copyCode ? (
