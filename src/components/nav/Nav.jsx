@@ -2,7 +2,6 @@
 import { Disclosure } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import ThemeToggle from "./components/themeToggle/ThemeToggle";
-import Profile from "./components/profile/Profile";
 import Link from "next/link";
 
 const navigation = [
@@ -49,29 +48,10 @@ export default function Nav() {
                     <h1 className="text-2xl text-bold">Blog</h1>
                   </Link>
                 </div>
-                <div className="hidden sm:ml-6 sm:block ">
-                  <div className="flex space-x-2">
-                    {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current ? "bg-gray-900 " : " ",
-                          "rounded-md px-3 py-2 text-sm font-medium"
-                        )}
-                        aria-current={item.current ? "page" : undefined}>
-                        {item.name}
-                      </a>
-                    ))}
-                  </div>
-                </div>
+                
               </div>
               <div className="absolute inset-y-0 right-0 gap-3 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <ThemeToggle />
-                <div className="md:flex hidden">
-                <Profile/>
-                </div>
-                
               </div>
             </div>
           </div>
@@ -95,7 +75,6 @@ export default function Nav() {
               ))}
 
               <div className="flex xl:hidden"></div>
-                <Profile mobil={true}/>
             </div>
           </Disclosure.Panel>
         </>
