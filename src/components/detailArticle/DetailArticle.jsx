@@ -6,6 +6,8 @@ import Image from "next/image";
 const DetailArticle = ({ post }) => {
   const { titulo, imagen, markdown,  contenido } = post;
 
+  console.log(post)
+
   return (
     <div className="w-full h-full">
       <header className="flex flex-col xl:flex-row flex-1 items-center gap-[50px] w-full">

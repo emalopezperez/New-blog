@@ -19,37 +19,13 @@ const links = [
     img: "",
     background: "#da85c731",
   },
-  {
-    link: "/",
-    name: "Css",
-    img: "",
-    background: "#7fb88133",
-  },
-  {
-    link: "/",
-    name: "Next",
-    img: "",
-    background: "#ff795736",
-  },
-  {
-    link: "/",
-    name: "Tailwind",
-    img: "",
-    background: "#ffb04f45",
-  },
-  {
-    link: "/",
-    name: "Ciberseguridad",
-    img: "",
-    background: "#ff295736",
-  },
 ];
 
 const CategoryList = () => {
   return (
-    <div className="mt-[30px] flex flex-col gap-8 h-full">
+    <div className="mt-[30px] flex flex-col gap-8 h-full ">
       <h3 className="font-bold text-[16px] md:text-[22px]">Categorias</h3>
-      <div className="w-full h-full flex flex-col md:flex-row gap-3 xl:justify-between flex-wrap">
+      <div className="w-full h-full flex flex-col md:flex-row gap-3 xl:justify-between flex-wrap max-w-[900px] md:max-w-[400px]">
         {links.map(({ link, img, name, background }, index) => (
           <Link href={link} key={index} className="hover:bg-black/10 rounded-md">
             <div
